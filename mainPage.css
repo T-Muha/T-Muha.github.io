@@ -1,0 +1,78 @@
+﻿body {
+    background-color: orange;
+}
+
+h1 {
+    text-align: center;
+    color: indigo;
+}
+
+.center-div {
+    position: absolute;
+    margin: 0 auto;
+    width: auto;
+    left: 30px;
+    right: 30px;
+    height: auto;
+}
+
+#mainBody {
+    position: absolute;
+    z-index: 1;
+    visibility: visible;
+    width: auto;
+    height: 700px;
+    background-color: orangered;
+    /*transition: background-color 2s;*/
+}
+
+#getImage {
+    position: relative;
+    top: 600px;
+}
+
+#editorMain {
+    position: absolute;
+    z-index: 0;
+    left: 10px;
+    right: 10px;
+    top: 80px;
+    bottom: 25px;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+#textEditor {
+    position: relative;
+    z-index: inherit;
+    visibility: hidden;
+    background-color: black;
+    float: left;
+    width: 48%;
+    height: 100%;
+    overflow: auto;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+}
+
+#imgStore {
+    position: relative;
+    z-index: inherit;
+    visibility: hidden;
+    background-color: black;
+    float: right;
+    width: 48%;
+    height: 100%;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+}
+
+#displayTxt {
+    color: white;
+    font-size: medium;
+    width: 100%;
+    word-wrap: break-word;
+}
