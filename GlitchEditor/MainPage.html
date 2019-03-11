@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="mainPage.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+    <button id="showImg" onclick="displayImage()">Show Image</button>
+    <header><h1>Glitch Art Creator</h1></header>
+    <main id="mainBody" class="center-div" style="text-align:center">
+        <input type="file" id="getImage">
+    </main>
+    <div id="editorMain">
+        <div id="textEditor" contenteditable="true" spellcheck="false" ><p id="displayTxt"></p></div>
+        <div id="imgStore"></div>
+    </div>
+    <canvas id="hiddenCanvas" hidden="hidden"></canvas>
+    <script src="mainPage.js"></script>
+</body>
+</html>
