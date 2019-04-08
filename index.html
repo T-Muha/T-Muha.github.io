@@ -7,19 +7,30 @@
     <link rel="stylesheet" type="text/css" href="HomePage.css" />
 </head>
 <body>
+    <div id="titleBlocker"></div>
     <div id="titleBox">
         <div id="title">
         <h1>Stuff</h1>
         <h3>Thomas Muha's Programming Webpage</h3>
         </div>
     </div>
-    <div id="linkBox">
-            <span class="link"><a href='GlitchEditor/MainPage.html'><p>Image Editor</p></a></span>
+    <div id="linkBox" class="noWidth">
+            <span class="link" onmouseenter="linkHover('one', true)" onmouseleave="linkHover('one', false)">
+                <a href='GlitchEditor/MainPage.html'><p>Image Editor</p></a>
+            </span>
             <div class="barrier"></div>
-            <span class="link"><a href='SodokuSolver/SodokuSolverPage.html'><p>Sodoku Solver</p></a></span>
+            <span class="link" onmouseenter="linkHover('two', true)" onmouseleave="linkHover('two', false)">
+                <a href='SodokuSolver/SodokuSolverPage.html'><p>Sodoku Solver</p></a>
+            </span>
             <div class="barrier"></div>
-            <span class="link"><a href=''><p>Sokoban Solver</p></a></span>
+            <span class="link" onmouseenter="linkHover('three', true)" onmouseleave="linkHover('three', false)">
+                <a href=''><p>Sokoban Solver</p></a>
+            </span>
+            <span id="hoverLineOne" class="hoverLine"></span>
+            <span id="hoverLineTwo" class="hoverLine"></span>
+            <span id="hoverLineThree" class="hoverLine"></span>
     </div>
     
 </body>
 </html>
+<script src="HomePage.js"></script>
