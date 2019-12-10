@@ -1,0 +1,104 @@
+﻿body {
+    position: relative;
+    margin: 0;
+    width: 100%;
+}
+
+h2 {
+    font-family: 'Lucida Sans';
+    font-size: 40px;
+    width: 100%;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: -1em;
+}
+
+h4 {
+    font-family: 'Lucida Sans';
+    margin: 0px;
+}
+
+#banner {
+    width: 100%;
+    height: 500px;
+    background-image: url("images/test.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+p {
+    font-family: Verdana;
+    font-size: 13px;
+    text-align: left;
+    width: 95%;
+}
+
+.textBlock {
+    font-size: 25px;
+    padding-left: 15px;
+}
+
+#description-container {
+    height: 125px;
+}
+
+.container {
+    width: 100%;
+    border-top: 3px solid black;
+    padding: 20px 10px 10px 10px;
+    margin: -40px 0 200px 0;
+}
+
+.card {
+    border: solid black medium;
+    border-radius: 5px;
+    box-shadow: 2px 3px 3px 3px rgb(128, 128, 128);
+    width: 310px;
+    height: 250px;
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.card-image {
+    object-fit: fill;
+    width: 100%;
+    height: 125px;
+    margin: 0 0 10px 0;
+    border-bottom: solid black thin;
+}
+
+#project-details {
+    padding-left: 5px;
+}
+
+#main-box {
+    margin-bottom: 3px;
+}
+
+.drop-box {
+    position: relative;
+    width: 70px;
+    height: 20px;
+    border: solid black thin;
+    background-color: white;
+    padding-left: 3px;
+}
+
+.hidden {
+    display: none;
+}
+
+.drop-box:hover {
+    background-color: lightgray;
+}
+
+#project-flex {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: none;
+}
