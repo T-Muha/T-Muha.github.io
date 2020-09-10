@@ -2,6 +2,7 @@ var init = function () {
     GenerateDropDown();
     AddDropCloseListener();
     Resize();
+    CreateShadowColors();
     window.onscroll = AdjustShadows;
     AdjustShadows();
 }
@@ -75,9 +76,38 @@ var Resize = function () {
     }
 }
 
-AdjustShadows = function () {
-    var calc = 5 + document.documentElement.scrollTop / 100;
-    var newShadow = 'inset 0 ' + calc + 'px ' + calc + 'px -1px rgb(128, 128, 128)'
+//Creates the darkened version of container background colors
+//Better to compute it once now then on scroll
+//Allows you to only have to update background colors, makes better shadows
+//Pretty proud of this one ngl
+CreateShadowColors = function() {
+    factor = .6; //Darkening factor
     containers = document.getElementsByClassName('container');
-    Array.from(containers).forEach(container => container.style.boxShadow = newShadow);
+    Array.from(containers).forEach(container => {
+        shadowCol = getComputedStyle(container).backgroundColor;
+        console.log(shadowCol);
+        var retrieveRGB = /rgb\((\d{1,3}), (\d{1,3}), (\d{1,3})\)/;
+        var RGB = retrieveRGB.exec(shadowCol);
+        console.log(RGB);
+        RGB.forEach(function(col, i) { RGB[i] = parseInt(col) * factor});
+        console.log(RGB);
+        shadowCol = "rgb(" + RGB[1] + ", " + RGB[2] + ", " + RGB[3] + ")";
+        console.log(shadowCol);
+        container.style.borderLeftColor = shadowCol;
+    });
+
+}
+
+AdjustShadows = function () {
+    var factor = 1.3 //adjust shadow weight increase with this
+    var calc = factor * (5 + document.documentElement.scrollTop / 100);
+    // rgb(47, 69, 91)
+    var weight = 'inset 0 ' + calc + 'px ' + calc + 'px -1px '
+    containers = document.getElementsByClassName('container');
+    Array.from(containers).forEach(container => {
+        // newShadow += document.getElementById(container.id).style.backgroundColor;
+        shadow = weight + getComputedStyle(container).borderLeftColor;
+        // console.log(shadow);
+        container.style.boxShadow = shadow;
+    });
 }

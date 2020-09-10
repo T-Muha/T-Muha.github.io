@@ -10,103 +10,141 @@
 <body>
     <div id="main-container">
         <div id="banner"></div>
-        <h2 id="name">Thomas Muha</h2>
+        <h2 id="name">Thomas Muha, <span style="font-size: 35px;">programmer</span><!--<span id="qualifier">Programmer Aspirant</span>--></h2>
         <div id="description-container" class="container" onscroll="ShadowScroll(this)">
+            <div id="logo-container">
+                <a class="logo" href="https://github.com/T-Muha">
+                    <img class="logo-image" alt="Github" src="images/Github.png" width="120" height="120">
+                 </a>
+                 <a class="logo" href="https://www.linkedin.com/in/thomas-muha-476284161/">
+                    <img class="logo-image" alt="Linkedin" src="images/linkedin.png" width="120" height="120">
+                 </a>
+            </div>
             <p class="textBlock">
-            This is my third year as a computer science student at the University of Cincinnati and my second semester as a co-op at Siemens PLM in Milford, Ohio.
-            My current co-op is the development of a web application using AngularJS and Flask. Although I have spent much time learning web development, I am
-            trying to branch into other areas such as simulations.
-            <br><br>
-            I have experience in Python and modules like Flask and Kivy, JavaScript and AngularJS, and PHP/mySQL.
-            Check out some of my side projects below. Each project has its own GitHub repository. (Links are WIP)
+                I'm a computer science student at the University of Cincinnati in my fourth year of study. Outside of school, I've worked on co-op twice at Siemens Plm Software as
+                a web application developer in Milford, Ohio. I also do some programming projects in my free time, mostly for fun. 
+                <br><br>
+                My co-op experience focused on the development of a web application using AngularJS and Flask. I worked primarily on developing frontend features and supporting these
+                features through API development on the backend. While I am familiar with web development, I am looking to broaden my experience before I graduate.
+                <br><br>
+                My other projects have involved Python, JavaScript, AngularJS, C#, and PHP/mySQL. Check them out below. Each project has its own repository at
+                my <a href="https://github.com/T-Muha" target="_blank" rel="noopener noreferrer">GitHub profile</a>.
+                
+                <!-- My resume is available on request -->
             </p>
         </div>
         <h2 id="projects-tab">Projects</h2>
-        <div id="project-container" class="container">
+        <div id="project-container" class="container bottom-container">
             <div id="drop-down">
                 <div id="main-box" onclick="ToggleDropDown()">Language</div>
             </div>
             <div id="project-flex">
                 <div id="mandelbrot" class="card csharp netcore">
-                    <img src="images/mandelbrot.png" class="card-image">
-                    <div id="project-details">
-                        <h4>Fractal Explorer</h4>
-                        <p>
-                            C# <br>
-                            .NET Core
-                        </p>
-                    </div>
+                    <a class="neutral-text" href="https://github.com/T-Muha/Fractal-Generator" target="_blank" rel="noopener noreferrer">
+                        <div>
+                            <img src="images/mandelbrot.png" class="card-image">
+                            <div id="project-details">
+                                <h4>Fractal Explorer</h4>
+                                <p>
+                                    C# <br>
+                                    .NET Core
+                                </p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div id="sokoban" class="card python kivy pil">
-                    <img src="images/sokoban.png" class="card-image">
-                    <div id="project-details">
-                        <h4>Sokoban Solver</h4>
-                        <p>
-                            Python <br>
-                            Kivy
-                            PIL
-                        </p>
-                        
-                    </div>
+                    <a class="neutral-text" href="https://github.com/T-Muha/sokoban-solver" target="_blank" rel="noopener noreferrer">
+                        <div>
+                            <img src="images/sokoban.png" class="card-image">
+                            <div id="project-details">
+                                <h4>Sokoban Solver</h4>
+                                <p>
+                                    Python <br>
+                                    Kivy
+                                    PIL
+                                </p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div id="sign-in" class="card javascript php mysql">
-                    <img src="images/tribunal_logo_color.png" class="card-image">
-                    <div id="project-details">
-                        <h4>Web Sign-In</h4>
-                        <p>
-                            JavaScript, PHP <br>
-                            mySQL
-                        </p>
-                        
-                    </div>
+                    <a class="neutral-text" href="https://github.com/T-Muha/ceas-tribunal-general-meeting-sign-in" target="_blank" rel="noopener noreferrer">
+                        <div>
+                            <img src="images/tribunal_logo_color.png" class="card-image">
+                            <div id="project-details">
+                                <h4>Web Sign-In</h4>
+                                <p>
+                                    JavaScript, PHP <br>
+                                    mySQL
+                                </p>
+
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div id="planet-sandbox" class="card python pyglet">
-                    <img src="images/planet.png" class="card-image">
-                    <div id="project-details">
-                        <h4>Planet Sandbox</h4>
-                        <p>
-                            Python <br>
-                            Pyglet
-                        </p>
-                        
-                    </div>
+                    <a class="neutral-text" href="https://github.com/T-Muha/planet-sandbox" target="_blank" rel="noopener noreferrer">
+                        <div>
+                            <img src="images/planet.png" class="card-image">
+                            <div id="project-details">
+                                <h4>Planet Sandbox</h4>
+                                <p>
+                                    Python <br>
+                                    Pyglet
+                                </p>
+
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div id="pixel-generator" class="card python kivy pil">
-                    <img src="images/pixel.png" class="card-image">
-                    <div id="project-details">
-                        <h4>Pixel Art Generator</h4>
-                        <p>
-                            Python <br>
-                            Kivy, PIL
-                        </p>
-                        
-                    </div>
+                    <a class="neutral-text" href="https://github.com/T-Muha/pixel-generator" target="_blank" rel="noopener noreferrer">
+                        <div>
+                            <img src="images/pixel.png" class="card-image">
+                            <div id="project-details">
+                                <h4>Pixel Art Generator</h4>
+                                <p>
+                                    Python <br>
+                                    Kivy, PIL
+                                </p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div id="pyglet-platformer" class="card python pyglet">
-                    <img src="images/platform.png" class="card-image">
-                    <div id="project-details">
-                        <h4>Platform Game "Engine"</h4>
-                        <p>
-                            Python <br>
-                            Pyglet
-                        </p>
-                        
-                    </div>
+                    <a class="neutral-text" href="https://github.com/T-Muha/Slime_Platform_Game" target="_blank" rel="noopener noreferrer">
+                        <div>
+                            <img src="images/platform.png" class="card-image">
+                            <div id="project-details">
+                                <h4>Platform Game "Engine"</h4>
+                                <p>
+                                    Python <br>
+                                    Pyglet
+                                </p>
+
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div id="sudoku" class="card python">
-                    <img src="images/sudoku.png" class="card-image">
-                    <div id="project-details">
-                        <h4>Sudoku Solver</h4>
-                        <p>
-                            Python <br>
-                            No Modules
-                        </p>
-                        
-                    </div>
+                    <a class="neutral-text" href="https://github.com/T-Muha/sudoku-solver" target="_blank" rel="noopener noreferrer">
+                        <div>
+                            <img src="images/sudoku.png" class="card-image">
+                            <div id="project-details">
+                                <h4>Sudoku Solver</h4>
+                                <p>
+                                    Python <br>
+                                    No Modules
+                                </p>
+
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-        <div id="footer"></div>
+        <!-- <div id="footer"></div> -->
     </div>
 </body>
 </html>

@@ -1,16 +1,31 @@
-﻿body {
+﻿a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.neutral-text {
+    color: inherit;
+    text-decoration: none;
+}
+
+html, body {
+    background-color: #436281;
     position: relative;
+    padding: 0;
     margin: 0;
-    width: 100%;
 }
 
 h2 {
+    color: #FFFFFF;
     font-family: 'Lucida Sans';
-    font-size: 40px;
-    width: 100%;
-    text-align: left;
+    font-size: 44px;
+    text-align: center;
+    text-shadow: -1px -1px 0 #436281, 1px -1px 0 #436281, -1px 1px 0 #436281, 1px 1px 0 #436281;
     margin-left: 10px;
-    margin-top: -1em;
+    margin-top: -1.1em;
 }
 
 h4 {
@@ -19,10 +34,12 @@ h4 {
 }
 
 #banner {
-    width: 100%;
-    height: 500px;
-    background-image: url("images/test.jpg");
-    background-size: cover;
+    height: 460px;
+    /* max-height: 864px; need to find a way to do this in case someone zooms in */
+    background-image: url("images/trees-cut.png");
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
@@ -30,38 +47,61 @@ p {
     font-family: Verdana;
     font-size: 13px;
     text-align: left;
+    font-weight: 400;
     width: 95%;
 }
 
 .textBlock {
-    font-size: 25px;
-    padding-left: 15px;
+    font-size: 22px;
+    padding: 0px 20% 50px 20%;
+    width: 60%;
 }
 
 #description-container {
-    height: 125px;
+    background-color: #436281;
+}
+
+#logo-container {
+    position: absolute;
+}
+
+.logo {
+    display: block;
+    margin: 35px 0 30px 60px;
+    /* justify-content: center; */
+}
+
+.logo-image {
+    object-fit: cover;
 }
 
 .container {
-    width: 100%;
-    border-top: 3px solid black;
-    padding: 20px 10px 10px 10px;
-    margin: -40px 0 200px 0;
+    border-top: 3px solid #FFFFFF;
+    padding: 70px 10px 10px 10px;
+    margin: -40px 0 150px 0;
 }
 
 .card {
+    background-color: #436281;
     border: solid black medium;
     border-radius: 5px;
-    box-shadow: 2px 3px 3px 3px rgb(128, 128, 128);
+    box-shadow: 2px 3px 3px 3px rgb(30, 30, 30);
     width: 310px;
     height: 250px;
     display: inline-block;
-    margin-top: 40px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 40px 15px 0 15px;
+    transition: all linear 0.1s;
+}
+
+.card:hover {
+    box-shadow: 4px 6px 6px 6px rgb(30, 30, 30);
+    width: 335px;
+    height: 270px;
+    margin: 20px 3px 0 2px;
 }
 
 .card-image {
+    background-color: white;
     object-fit: fill;
     width: 100%;
     height: 125px;
@@ -95,10 +135,22 @@ p {
 }
 
 #project-flex {
-    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex: none;
+}
+
+#qualifier {
+    float: right;
+}
+
+#project-container {
+    background-color: #9E6F20;
+}
+
+.bottom-container{ 
+    padding-bottom: 200px;
+    margin-bottom: 0;
 }
